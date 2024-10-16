@@ -8,7 +8,7 @@ function copyAmount() {
 }
 
 function copyUPI() {
-    const upi = 'mdas11528-1@oksbi';
+    const upi = 'unicashofficial02@okhdfcbank';
     navigator.clipboard.writeText(upi).then(() => {
         showPopup('copyModal', 'UPI copied to clipboard!');
     }).catch(err => {
@@ -38,7 +38,9 @@ document.getElementById('confirmButton').onclick = function() {
         alert('Please enter a UTR number before submitting.');
     }
 };
-
+function myFunction (radio) {
+  var x = document.getElementById("rdaacls").value;
+}
 // Close modal when clicking outside
 window.onclick = function(event) {
     if (event.target == document.getElementById('copyModal')) {
