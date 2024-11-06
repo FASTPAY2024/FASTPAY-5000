@@ -1,5 +1,5 @@
 function copyAmount() {
-    const amount = '₹ 25000';
+    const amount = '₹ 9700';
     navigator.clipboard.writeText(amount).then(() => {
         showPopup('copyModal', 'Amount copied to clipboard!');
     }).catch(err => {
