@@ -37,11 +37,12 @@ h1 h2 h3 h4 h5 h6{
 }
 
 .box1  {
-  margin-left: 0.1px;
+  margin-left: 10px;
 }
 
 .box1 {
     background-color: #FDFEFE;
+    height:30%;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 10px hsla(9, 100%, 64%, 0);
