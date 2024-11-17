@@ -1,51 +1,43 @@
-function copyAmount() {
-    const amount = '₹ 7200';
-    navigator.clipboard.writeText(amount).then(() => {
-        showPopup('copyModal', 'Amount copied to clipboard!');
-    }).catch(err => {
-        showPopup('copyModal', 'Failed to copy amount!');
-    });
+function showNotification(message, isError = false) {
+  const notification = document.getElementById("notification");
+  notification.innerText = message;
+  notification.className = isError ? "notification error" : "notification";
+  notification.style.display = "block";
+  
+  setTimeout(() => {
+    notification.style.display = "none";
+  }, 3000);
 }
 
-function copyUPI() {
-    const upi = 'tanushreebarman956@okicici';
-    navigator.clipboard.writeText(upi).then(() => {
-        showPopup('copyModal', 'UPI copied to clipboard!');
-    }).catch(err => {
-        showPopup('copyModal', 'Failed to copy UPI!');
-    });
+function copyText(text) {
+  const tempInput = document.createElement("input");
+  document.body.appendChild(tempInput);
+  tempInput.value = text;
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+  showNotification("Copied: " + text);
 }
 
-function showPopup(modalId, message) {
-    document.getElementById(modalId).style.display = "block";
-    document.getElementById('copyMessage').innerText = message;
+function submitUTR() {
+  const utr = document.getElementById("utr").value;
+  if (utr) {
+    showNotification("UTR submitted successfully: " + utr);
+  } else {
+    showNotification("Please enter a UTR number.", true);
+  }
 }
 
-function closeModal(modalId) {
-    document.getElementById(modalId).style.display = "none";
+function showError() {
+  showNotification("Payment failed! Please try using a bank account.", true);
 }
-
-document.getElementById('submitUtrButton').onclick = function() {
-    document.getElementById('utrModal').style.display = "block";
-};
-
-document.getElementById('confirmButton').onclick = function() {
-    const utrValue = document.getElementById('utrInput').value;
-    if (utrValue) {
-        alert('UTR submitted: ' + utrValue);
-        closeModal('utrModal');
+// Handle Submit UTR button click
+document.getElementById("submit-utr").addEventListener("click", function() {
+    const utrNumber = document.getElementById("utr-number").value;
+    if (utrNumber) {
+        // Navigate to the success page
+        window.location.href = "success.html"; // Navigate to the success page
     } else {
-        alert('Please enter a UTR number before submitting.');
+        alert("Please enter the UTR number.");
     }
-};
-function myFunction (radio) {
-  var x = document.getElementById("rdaacls").value;
-}
-// Close modal when clicking outside
-window.onclick = function(event) {
-    if (event.target == document.getElementById('copyModal')) {
-        closeModal('copyModal');
-    } else if (event.target == document.getElementById('utrModal')) {
-        closeModal('utrModal');
-    }
-};
+});
