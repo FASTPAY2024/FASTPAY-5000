@@ -16,17 +16,17 @@ body {
 }
 
 hr {
-    border: 0.1px  solid Gainsboro;
+    border: 0.0.3 px  solid Gainsboro;
 }
 
 img {
-  margin-left:20%;
+  margin-left:15%;
   margin-right: 10%;
 }
 
 p {
   font-weight: bold;
-  font-size: 8px;
+  font-size: 1.0en;
 }
 
 h1 h2 h3 h4 h5 h6{
