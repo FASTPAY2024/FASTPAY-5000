@@ -36,11 +36,11 @@ h1 h2 h3 h4 h5 h6{
 
 }
 
-.box1  {
+.nono {
   margin-left: 10px;
 }
 
-.box1 {
+.nono {
     background-color: #FDFEFE;
     height:30%;
     padding: 10px;
@@ -51,7 +51,7 @@ h1 h2 h3 h4 h5 h6{
     transition: transform 0.3s;
 }
 
-.box1:hover {
+.nono:hover {
     transform: scale(1.02);
 }
 
@@ -154,9 +154,9 @@ h1 h2 h3 h4 h5 h6{
 }
 
 
-@media only screen and (max-width:auto;) 
+@media only screen and (max-width:auto;max-width:auto;
     .box1{
-        padding: 5px;
+        padding: 20px;
     }
 
     .btn1, .btn2, {
