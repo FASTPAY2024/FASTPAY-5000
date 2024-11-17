@@ -1,5 +1,13 @@
+/* Font and Base Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
 body {
-    font-family: Arial,sans-serif;
+    font-family: sans-serif;
     height: auto;
     width: auto;
     background-color: #FDFEFE;
@@ -28,7 +36,11 @@ h1 h2 h3 h4 h5 h6{
 
 }
 
-box1 {
+.box1  {
+  margin-left: 10px;
+}
+
+.box1 {
     background-color: #FDFEFE;
     padding: 20px;
     border-radius: 10px;
@@ -65,16 +77,23 @@ box1 {
     font-size: 12px;
 }
 
-.inp {
-    width: 85%;
-    padding: 10px;
-    margin-bottom: 0px;
-    border: 1px solid #ccc;
-    border-radius: 0px;
-    margin: auto;
+/* UTR Instruction */
+.utr-instruction {
+  color: #007bff;
+  font-size: 0.9em;
+  margin: 10px 0;
 }
 
-.btn1, .btn2 {
+#utr {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.submit-btn, .error-btn {
     width: 85%;
     height: 50px;
     padding: 10px 15px;
@@ -84,26 +103,26 @@ box1 {
     transition: background 0.3s, transform 0.3s;
 }
 
-.btn1 {
+.submit-btn {
     background-color: #27A2FA;
     color: white;
 }
 
-.btn1:hover {
+.submit-btn:hover {
     background-color: #0056b3;
     transform: scale(1.05);
 }
 
-.btn2 {
+.error-btn {
     background-color: #FD7320;
     color: white;
 }
 
-.btn2:hover {
+.error-btn:hover {
     background-color: #FF8000;
     transform: scale(1.05);
 }
-
+/* Notification Popup */
 .notification {
   width: 100%;
   position: fixed;
