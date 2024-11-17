@@ -104,7 +104,7 @@ box1 {
     transform: scale(1.05);
 }
 
-.modal {
+.notification {
   width: 100%;
   position: fixed;
   top: 20px;
