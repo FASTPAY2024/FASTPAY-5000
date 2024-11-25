@@ -3,79 +3,96 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-    font-family: sans-serif;
-    height: 100%;
-    width: 100%;
+  font-family: Arial,sans-serif;
+    height: auto;
+    width: auto;
     background-color: #FDFEFE;
     margin: auto;
-    padding: 4px;
+    padding: 20px;
 }
 
-hr {
-    border: 0.0.3 px  solid Gainsboro;
+/* Container */
+.container {
+  width: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: left;
 }
 
-img {
-  margin-left:15%;
-  margin-right: 10%;
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  color: #333;
+  font-size: 0.9em;
 }
 
-p {
-  font-weight: bold;
-  font-size: 0.0.1px;
-}
-
-h1 h2 h3 h4 h5 h6{
-  font-weight: bold;
-  font-size: 4px;
-}
-
-}
-
-.box1 {
+.header .icons i {
   margin-left: 10px;
 }
 
-.box1 {
-    background-color: #FDFEFE;
-    height:30%;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px hsla(9, 100%, 64%, 0);
-    max-width: auto;
-    margin: auto;
-    transition: transform 0.3s;
+/* Content */
+.content h1 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: left;
 }
 
-.box1:hover {
-    transform: scale(1.02);
+.info p {
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
 }
 
-.cpb {
-    background-color: #f8f8f8;
-    color:DeepSkyBlue;
-    width:  24%;
-    height: 12px;
-    border: 1px solid #00BFFF;
-    padding: 1px 1px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
+.info span {
+  color: #555;
 }
 
-.cpb:hover {
-    background-color: #f8f8f8;
-    transform: scale(1.05);
+button {
+  padding: 6px 12px;
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.a1 {
-    background-color: #FDFEFE;
-    color:DeepSkyBlue;
-    font-size: 12px;
+button:hover {
+  background-color: #ccc;
+}
+
+/* Section Title */
+.section-title {
+  color: #007bff;
+  font-size: 0.9em;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* Payment Options */
+.payment-options {
+  margin: 15px 0;
+}
+
+.payment-options label {
+  display: flex;
+  align-items: left;
+  margin: 8px 0;
+}
+
+.payment-options img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 }
 
 /* UTR Instruction */
@@ -85,7 +102,7 @@ h1 h2 h3 h4 h5 h6{
   margin: 10px 0;
 }
 
-.utr {
+#utr {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -94,35 +111,29 @@ h1 h2 h3 h4 h5 h6{
   font-size: 1em;
 }
 
-.submit-btn, .error-btn {
-    width: 95%;
-    height: 50px;
-    padding: 10px 15px;
-    border-radius:45px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-}
-
+/* Submit Button */
 .submit-btn {
-    background-color: #27A2FA;
-    color: white;
-}
-
-.submit-btn:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-top: 10px;
 }
 
 .error-btn {
-    background-color: #FD7320;
-    color: white;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-top: 10px;
 }
 
-.error-btn:hover {
-    background-color: #FF8000;
-    transform: scale(1.05);
-}
 /* Notification Popup */
 .notification {
   width: 100%;
@@ -139,6 +150,7 @@ h1 h2 h3 h4 h5 h6{
   display: none;
   animation: slideIn 0.5s ease, fadeOut 0.5s ease 2.5s;
 }
+
 .notification.error {
   background-color: #FF5722;
 }
@@ -152,23 +164,3 @@ h1 h2 h3 h4 h5 h6{
   from { opacity: 1; }
   to { opacity: 0; }
 }
-
-
-@media only screen 
-    .box1{
-        padding: 0px;
-    }
-
-    .btn1, .btn2, {
-        width: 100%;
-        margin: 5px 0;
-        font-size: 16px;
-    }
-
-    .utr {
-        width: 95%;
-}
-
-
-
-
