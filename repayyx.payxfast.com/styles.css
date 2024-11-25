@@ -8,8 +8,8 @@
 
 body {
     font-family: sans-serif;
-    height: auto;
-    width: auto;
+    height: 100%;
+    width: 100%;
     background-color: #FDFEFE;
     margin: auto;
     padding: 4px;
@@ -26,21 +26,21 @@ img {
 
 p {
   font-weight: bold;
-  font-size: 1.0en;
+  font-size: 0.0.1px;
 }
 
 h1 h2 h3 h4 h5 h6{
   font-weight: bold;
-  font-size: 10px;
+  font-size: 4px;
 }
 
 }
 
-.nono {
+.box1 {
   margin-left: 10px;
 }
 
-.nono {
+.box1 {
     background-color: #FDFEFE;
     height:30%;
     padding: 10px;
@@ -51,7 +51,7 @@ h1 h2 h3 h4 h5 h6{
     transition: transform 0.3s;
 }
 
-.nono:hover {
+.box1:hover {
     transform: scale(1.02);
 }
 
@@ -85,7 +85,7 @@ h1 h2 h3 h4 h5 h6{
   margin: 10px 0;
 }
 
-#utr {
+.utr {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -154,9 +154,9 @@ h1 h2 h3 h4 h5 h6{
 }
 
 
-@media only screen and (max-width:auto;max-width:auto;
+@media only screen 
     .box1{
-        padding: 20px;
+        padding: 0px;
     }
 
     .btn1, .btn2, {
